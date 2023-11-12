@@ -29,7 +29,8 @@
 .beta {
     color: violet;
     font-style: italic;
-    animation: blink-animation 3s infinite;
+    font-size: 20px;
+    animation: spin 3s infinite;
 }
 
 @keyframes blink-animation {
@@ -48,5 +49,20 @@
     100% {
         opacity: 1;
         /* Fully visible */
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+        /* Starting position, no rotation */
+    }
+    to {
+        transform: rotateY(360deg);
+        box-shadow: var(--primary) 0px 7px 29px 0px;
+        padding: 7px;
+        border-radius: 30px;
+        text-shadow: .1em .1em 0 var(--primary);
+        /* Full rotation, change to the desired angle */
     }
 }
