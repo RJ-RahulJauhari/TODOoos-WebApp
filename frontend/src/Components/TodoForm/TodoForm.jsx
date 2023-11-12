@@ -26,7 +26,7 @@ const TodoForm = () => {
   
   return (
 
-    <div className='todoform '>
+    <div className='todoform'>
       <input value={todo} onKeyUp={(e) => {handleKey(e)}} onChange={(e) => {setTodo(e.target.value)}} placeholder='Type your todo...' className='field cust' type="text" />
       <button onClick={() =>{addTodo()}} className='scaleUp hoverable clickable'>Add Todo</button>
     </div>
