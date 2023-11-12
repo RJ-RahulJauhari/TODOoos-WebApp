@@ -1,24 +1,28 @@
 .home {
     width: 100%;
-    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
     .todo-container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 5px;
-        flex-wrap: wrap;
         padding: 30px;
-        width: 60%;
+        width: 80%;
         border: solid white 3px;
         border-top-right-radius: 50px;
         border-top-left-radius: 50px;
-        border-bottom: none;
+        border-radius: 50px;
+        padding-bottom: 70px;
     }
 }
 
 .search {
+    width: 100%;
     .search-bar {
         background-color: var(--secondary);
         border-radius: 30px;
@@ -28,8 +32,6 @@
         font-size: var(--regular-font-size);
         padding-left: 25px;
         margin-bottom: 20px;
-        width: auto;
-        max-width: 750px;
-        min-width: 500px;
+        width: 70%;
     }
 }

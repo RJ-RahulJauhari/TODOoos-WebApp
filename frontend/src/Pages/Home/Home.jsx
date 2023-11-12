@@ -41,7 +41,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home ">
+    <div className="home">
       <TodoForm />
       <div className="todo-container flex1">
         <h2>Todos</h2>

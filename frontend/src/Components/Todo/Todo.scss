@@ -1,17 +1,20 @@
 .todo {
     background-color: var(--secondary);
     padding: 15px;
-    width: auto;
-    min-width: 400px;
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 100px;
     .task {
         text-align: start;
         padding-left: 30px;
         font-size: var(--regular-font-size);
         p {
-            text-overflow: ellipsis;
+            display: flex;
+            word-wrap: break-word;
+            overflow: auto;
+            text-align: start;
         }
     }
     .options {
