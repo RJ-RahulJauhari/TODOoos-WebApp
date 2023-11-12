@@ -62,7 +62,8 @@ const Todo = ({ id, todo, completed }) => {
   };
 
   const editHandler = async (event) => {
-    if (event.key === "Enter") {
+    
+    if (event.key === "Enter" || event.type === "blur") {
       try {
         await axios
           .patch(`${BASE_URL}/todo/update?id=${id}`, { todo: updatedTodo })
@@ -85,8 +86,10 @@ const Todo = ({ id, todo, completed }) => {
             onKeyUp={(e) => {
               editHandler(e);
             }}
-            className="field"
+            onBlur={(e) => {editHandler(e)}}
+            className="field cust"
             value={updatedTodo}
+            autoFocus
             type="text"
             placeholder="Edit your task"
             onChange={(e) => {
